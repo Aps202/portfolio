@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1a0033;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: black;
+        }
+        .navbar a {
+            color: white;
+            font-weight: bold;
+        }
+        .card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .card img {
+            object-fit: cover;
+            height: 250px;
+        }
+        .card-body {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .card-text {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+        <div class="container-fluid">
+          <a class="navbar-brand fs-10" href="#">My Portfolio</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link nav-link-custom" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-link-custom" href="About.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-link-custom" href="Projects.html">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-link-custom" href="Contact.html">Contact</a>
+              </li>
+            </ul>
+        </div>
+      </nav>  
+      
+      <div class="container mt-3 ms-3">
+        <h3 class="text-left fw-bold ms-3" style="margin-bottom: 20px;"> Projects _______________________</h3>
+    </div>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-left">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="1.jpg" class="card-img-top" alt="Image 1">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Robotic System with Arduino</h5>
+                            <p class="card-text">This project involves designing and building a robot capable of performing various tasks autonomously using sensors and control algorithms.</p>
+                            <a href="Project01.html" class="btn btn-success">More Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="2.jpg" class="card-img-top" alt="Image 2">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Employee Management System</h5>
+                            <p class="card-text">This web-based application streamlines the process of managing employee records, attendance, payroll, and performance metrics.</p>
+                            <a href="Project02.html" class="btn btn-success">More Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="3.jpg" class="card-img-top" alt="Image 3">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Personal Portfolio</h5>
+                            <p class="card-text">A personal portfolio website designed to showcase my skills, projects, and professional journey with a modern user interface.</p>
+                            <a href="Project03.html" class="btn btn-success">More Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

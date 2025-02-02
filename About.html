@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        p{
+            text-align: justify;
+        }
+        body {
+            background-color: #1a0033;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: black;
+        }
+        .navbar a {
+            color: white;
+            font-weight: bold;
+        }
+        .about-me {
+            margin: 50px;
+            display: flex;
+            align-items: center;
+        }
+        .profile-image {
+            width: 280px;
+            height: 280px;
+            /* border-radius: 50%; */
+            margin-right: 20px;
+            gap:25px;
+        }
+        .skills {
+            margin: 50px;
+        }
+        .progress {
+            margin-bottom: 20px;
+        }
+        .skills-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .circle-chart {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 10px;
+            display: inline-block;
+        }
+        .circle-chart svg {
+            transform: rotate(-90deg);
+        }
+        .circle-chart circle {
+            fill: none;
+            stroke-width: 10;
+        }
+        .circle-background {
+            stroke: #868788;
+        }
+        .circle-progress {
+            stroke: #08f4bd;
+            stroke-linecap: round;
+            stroke-dasharray: 314;
+            stroke-dashoffset: 314;
+            transition: stroke-dashoffset 1s ease-in-out;
+        }
+        .circle-text {
+            font-size: 14px;
+            font-weight: bold;
+            text-anchor: middle;
+            dominant-baseline: middle;
+            fill: white;
+        }
+
+        .circle-label {
+            font-size: 14px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 5px;
+        }
+        .btn-resume {
+      background-color: #12fdd4;
+      color: black;
+    }
+    .btn-resume:hover {
+      opacity: 0.8;
+    }
+
+        /* Interest Container */
+        .interests-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        /* Individual Interest Item */
+        .interest-item {
+            width: 200px;
+            padding: 20px;
+            background: #1a0033;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            text-align: center;
+            transform: translateY(30px);
+            opacity: 0;
+            transition: transform 0.6s ease, opacity 0.6s ease;
+        }
+
+        /* Icons */
+        .interest-item i {
+            font-size: 40px;
+            color: #9ac8fa;
+            margin-bottom: 10px;
+        }
+
+        /* Animations */
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+        <div class="container-fluid">
+          <a class="navbar-brand fs-10" href="#">My Portfolio</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link nav-link-custom" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-link-custom" href="About.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-link-custom" href="Projects.html">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-link-custom" href="Contact.html">Contact</a>
+              </li>
+            </ul>
+        </div>
+      </nav>
+      
+
+    <div class="container about-me">
+        <img src="A.png" alt="Profile Image" class="profile-image">
+        <div>
+            <h2>About Me...</h2>
+            <p>I am an enthusiastic undergraduate pursuing a Bachelor’s degree in Health Information and Communication Technology (HICT) 
+                at Gampaha Wickramarachchi University of Indigenous Medicine, alongside a Bachelor of Information Technology (BIT) at the University of Colombo School of Computing (UCSC). With a strong background in web development, cloud services, and database management,
+                I transform ideas into impactful digital experiences that lead to the intersection of healthcare and technology.</p>
+            <p>I am continuously driven by a passion for learning and staying updated on the latest technologies and frameworks while exploring 
+                innovative solutions that enhance health systems and improve patient outcomes. My academic journey has provided me with a solid 
+                foundation in health informatics, communication systems, and emerging technologies, equipping me to excel in both the healthcare
+                 and IT sectors. I thrive in collaborative environments and am eager to contribute to impactful projects that drive positive change. </p>
+         <div class="mt-4">
+        <a href="cv.pdf" target="_blank" class="btn btn-custom btn-resume">Download Resume</a>
+        </div>
+        </div>
+    </div>
+   
+
+    <div class="container skills">
+        <h3 class="text-left fw-bold" style="margin-bottom: 20px;">Skills _______________________</h3>
+        <div class="row">
+            <!-- Technical Skills -->
+            <div class="col-md-6 pe-4">
+                <h4 class="mb-4">Technical Skills</h4>
+                <div class="skills-card">
+                    <p>🔵 HTML</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 100%"></div>
+                    </div>
+                    <p>🖥 VSCode</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 90%"></div>
+                    </div>
+                    <p>🎨 CSS</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 70%"></div>
+                    </div>
+                    <p>🚀 JavaScript</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 60%"></div>
+                    </div>
+                    <p>🎨 Figma</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 95%"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Professional Skills and Interests Section -->
+            <div class="col-md-6 ps-2">
+                <h4 class="mb-4">Professional Skills</h4>  
+                <div class="d-flex flex-wrap justify-content-center gap-4">
+                    <div class="text-center">
+                        <p class="circle-label">Creativity</p>
+                        <div class="circle-chart" data-percent="90">
+                            <svg width="120" height="120">
+                                <circle class="circle-background" cx="60" cy="60" r="50"/>
+                                <circle class="circle-progress" cx="60" cy="60" r="50"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <p class="circle-label">Communication</p>
+                        <div class="circle-chart" data-percent="65">
+                            <svg width="120" height="120">
+                                <circle class="circle-background" cx="60" cy="60" r="50"/>
+                                <circle class="circle-progress" cx="60" cy="60" r="50"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <p class="circle-label">Problem Solving</p>
+                        <div class="circle-chart" data-percent="75">
+                            <svg width="120" height="120">
+                                <circle class="circle-background" cx="60" cy="60" r="50"/>
+                                <circle class="circle-progress" cx="60" cy="60" r="50"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <p class="circle-label">Teamwork</p>
+                        <div class="circle-chart" data-percent="85">
+                            <svg width="120" height="120">
+                                <circle class="circle-background" cx="60" cy="60" r="50"/>
+                                <circle class="circle-progress" cx="60" cy="60" r="50"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Interests Section -->
+                <h4 class="section-title mt-5 mb-4">Interests</h4>
+                <div class="interests-container d-flex flex-wrap justify-content-center gap-2">
+                    <div class="interest-item fade-in">
+                        <i class="fas fa-plane"></i>
+                        <h3>Traveling</h3>
+                        <p>Enjoy discovering new places, cultures, and experiences.</p>
+                    </div>
+                    <div class="interest-item fade-in">
+                        <i class="fas fa-music"></i>
+                        <h3>Music</h3>
+                        <p>Listening to music and playing instruments.</p>
+                    </div>
+                    <div class="interest-item fade-in">
+                        <i class="fas fa-music"></i>
+                        <h3>Music</h3>
+                        <p>Listening to music and playing instruments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll(".circle-chart").forEach(chart => {
+                const percentage = chart.getAttribute("data-percent");
+                const circle = chart.querySelector(".circle-progress");
+                const radius = circle.r.baseVal.value;
+                const circumference = 2 * Math.PI * radius;
+                const offset = circumference - (percentage / 100) * circumference;
+                
+                circle.style.strokeDasharray = circumference;
+                circle.style.strokeDashoffset = circumference;
+
+                setTimeout(() => {
+                    circle.style.strokeDashoffset = offset;
+                }, 500);
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const items = document.querySelectorAll(".fade-in");
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            items.forEach(item => {
+                observer.observe(item);
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
