@@ -18,7 +18,7 @@ This repository contains the source code for my personal portfolio website. The 
 
 
 ## 🌍 Live Demo
-[Live Portfolio](https://your-github-username.github.io/portfolio/) *(Replace with your actual GitHub Pages link once deployed)*
+[[Live Portfolio](https://your-github-username.github.io/portfolio/)](https://aps202.github.io/) *(Replace with your actual GitHub Pages link once deployed)*
 
 ## 📜 License
 This project is open-source and available under the [MIT License](LICENSE).
